@@ -26,7 +26,7 @@ type User = {
   status: 'Active' | 'Inactive'; // Assuming status can be either 'Active' or 'Inactive'
   role: string;
   email: string;
-  teams: Team[]; // Array of Team types
+  teams: []; // Array of Team types
 };
 
 const newUserTemplate: User = {

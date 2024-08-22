@@ -12,7 +12,6 @@ type User = {
   // Add any other fields your user object may have
 };
 
-
 type UserDetails = {
   user: User;
   onClose: () => void;
