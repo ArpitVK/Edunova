@@ -19,7 +19,7 @@ export default function Sidebar() {
             <Image
               className={`${activeComponent === 'overView'? 'bg-indigo-600': ''} bg-black rounded mx-1 group-hover:bg-indigo-600`}
               src="/images/gridButton.svg"
-              height={22}
+              height={24}
               width={24}
               alt="gridButton"
             />

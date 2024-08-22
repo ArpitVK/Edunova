@@ -2,6 +2,17 @@ import React from 'react';
 import Image from 'next/image';
 import { FiX } from 'react-icons/fi';
 
+type User = {
+  image: string;
+  name: string;
+  username: string;
+  role: string;
+  gender: string;
+  email: string;
+  // Add any other fields your user object may have
+};
+
+
 type UserDetails = {
   user: User;
   onClose: () => void;

@@ -251,13 +251,17 @@ const columns = [
       <div className="flex gap-2">
         <button 
           className="p-1 text-gray-500 hover:text-red-500"
-          onClick={() => handleDelete(info.row.original)}
+          onClick={(e) => {
+            e.stopPropagation();
+            handleDelete(info.row.original)}}
         >
           <FiTrash2 size={16} />
         </button>
         <button 
           className="p-1 text-gray-500 hover:text-blue-500"
-          onClick={() => handleEdit(info.row.original)}
+          onClick={(e) => {
+            e.stopPropagation();
+            handleEdit(info.row.original)}}
         >
           <FiEdit2 size={16} />
         </button>
@@ -292,9 +296,8 @@ const table = useReactTable({
             <FiSearch className="absolute left-2  top-1/2 transform -translate-y-4 text-gray-400" />
           </div>
           {/* Add filter button */}
-          <button className=" rounded-lg px-3 py-2 flex items-center gap-2">
           <FilterComponent filters={filters} onFilterChange={handleFilterChange} />
-          </button>
+          
           <button className="bg-indigo-600 text-white px-4 py-2 mr-4 rounded-lg flex items-center gap-2" onClick={handleAddMember} >
             <FiPlus /> ADD MEMBER
           </button>

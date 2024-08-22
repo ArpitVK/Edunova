@@ -4,11 +4,14 @@ import Image from 'next/image';
 type User = {
   image: string;
   name: string;
-  email: string;
-  role: string;
+  username: string;
+  gender: string;
   status: 'Active' | 'Inactive';
-  teams: string[];
+  role: string;
+  email: string;
+  teams: [];
 };
+
 
 type EditFormProps = {
   user: User;
