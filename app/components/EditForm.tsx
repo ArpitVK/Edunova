@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import Image from 'next/image';
+
+type Team = 'Design' | 'Product' | 'Marketing'; 
 type User = {
   image: string;
   name: string;
@@ -9,7 +11,7 @@ type User = {
   status: 'Active' | 'Inactive';
   role: string;
   email: string;
-  teams: [];
+  teams: Team[];
 };
 
 

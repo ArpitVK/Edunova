@@ -26,7 +26,7 @@ type User = {
   status: 'Active' | 'Inactive'; // Assuming status can be either 'Active' or 'Inactive'
   role: string;
   email: string;
-  teams: []; // Array of Team types
+  teams: Team[]; // Array of Team types
 };
 
 const newUserTemplate: User = {
@@ -156,7 +156,6 @@ const Page=() => {
 
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     const query = e.target.value;
-    console.log('Search query:', query);
     setSearchQuery(query);
 
     
@@ -345,7 +344,9 @@ const table = useReactTable({
           user={editingUser} 
           onSave={handleSaveEdit} 
           onCancel={() => setEditingUser(null)} 
-        />
+          onRemovePhoto={() => {
+            // Implement the photo removal logic here
+            console.log("Photo removed");}}/>
       )}
     </div>
   )
